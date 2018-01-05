@@ -1,0 +1,18 @@
+<ion-view view-title="Drivers">
+    <ion-content class="padding">
+        <div style="text-align:center" ng-if="ctrl.drivers.length==0">
+            <ion-spinner icon="lines"></ion-spinner>
+        </div>
+        <div class="list">
+
+            <a class="item item-avatar" ng-click="ctrl.showDriver(driver.name)" ng-repeat=" driver in ctrl.drivers">
+                <img src="img/driver2.png">
+                <h2><strong>{{driver.name}}</strong><i style="padding-left:80%" class="icon ion-arrow-right-c"></i></h2>
+
+                <p>Bus No :{{driver.busno.busNo}}</p>
+
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>

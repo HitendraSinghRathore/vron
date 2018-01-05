@@ -1,0 +1,18 @@
+<ion-modal-view view-title="VRON">
+    <ion-header-bar class="bar-positive">
+        <h1 class="title">Buses</h1>
+        <button class="button  button-clear" ng-click="closeModal()">Close</button>
+    </ion-header-bar>
+    <ion-content ng-controller="showBusesCtrl as ctrl">
+        <div style="text-align:center" class="has-header" ng-if="ctrl.buses.length==0">
+            <ion-spinner icon="lines"></ion-spinner>
+        </div>
+        <div class="list">
+            <a class="item item-avatar" ng-repeat=" bus in ctrl.buses" href="">
+                <img src="img/school-bus.png">
+                <h2><strong>{{bus.busNo}}</strong></h2>
+                <p>{{bus.route}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-modal-view>

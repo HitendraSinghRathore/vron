@@ -1,0 +1,20 @@
+<ion-view view-title="Map">
+    <ion-content>
+        <div map-lazy-load="https://maps.google.com/maps/api/js" style="background-color:gray;height:100%">
+            <!-- <ng-map center="27,77" zoom="11" zoom-control="false" street-view-control="false" style="background-color:gray;height:100%;width:100%">
+                <marker center="27,77" icon="img/marker.png"></marker>
+            </ng-map> -->
+
+            <ng-map zoom="16" center="[{{ctrl.lat}},{{ctrl.long}}]" street-view-control="false" style="background-color:gray;height:100%;width:100%">
+                <marker ng-repeat="pos in ctrl.array" position="{{pos.lat}}, {{pos.lng}}" icon="{
+                    url:'img/icon.png'}"></marker>
+            </ng-map>
+        </div>
+
+        <ion-floating-button ng-if="!ctrl.track" ng-click="ctrl.myEvent()" text="START Tracking" button-color="#ef473a" icon="ion-android-navigate" icon-color="#fff" is-centered="true">
+        </ion-floating-button>
+
+        <ion-floating-button ng-if="ctrl.track" ng-click="ctrl.closeEvent()" text="STOP Tracking" button-color="#ff0000" icon="ion-close-round" icon-color="#fff" is-centered="true">
+        </ion-floating-button>
+    </ion-content>
+</ion-view>

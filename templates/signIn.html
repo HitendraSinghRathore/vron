@@ -1,0 +1,26 @@
+<ion-view view-title="VRON">
+    <ion-content>
+        <div align="center" style="height:30%;margin-top:4em">
+            <img src="img/bus.png" style="height:80%;padding-top:1em;padding-bottom:1em" alt="bus-image-0023" />
+        </div>
+        <div class="list list-inset ">
+            <form name="ctrl.signInForm" novalidate>
+                <label class="item item-input item-floating-label">
+            <span class="input-label">User Name</span>
+            <input type="email" name="email" placeholder="User Name" ng-model="ctrl.signInEmail"/>
+            </label>
+                <label class="item item-input item-floating-label">
+            <span class="input-label">Password</span>
+            <input type="password" name="password" placeholder="Password" ng-model="ctrl.signInPassword"/>
+            </label>
+                <button class="button button-block button-balanced" onclick="ctrl.signIn()">
+            Sign In
+            </button>
+            </form>
+        </div>
+
+    </ion-content>
+    <div class="bar bar-subheader bar-{{ctrl.errorColor}}" ng-if="ctrl.error">
+        <div class="title">{{ctrl.errorStmt}}</div>
+    </div>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view view-title="Map">
+    <ion-content>
+        <div map-lazy-load="https://maps.google.com/maps/api/js" style="background-color:gray;height:100%">
+            <ng-map center="27,77" zoom="11" zoom-control="false" street-view-control="false" style="background-color:gray;height:100%;width:100%">
+                <marker center="27,77" icon="img/marker.png"></marker>
+            </ng-map>
+        </div>
+        <ion-floating-button ng-click="ctrl.myEvent()" button-color="#2196F3" icon="ion-android-bus" icon-color="#fff">
+        </ion-floating-button>
+
+    </ion-content>
+</ion-view>

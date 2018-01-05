@@ -1,0 +1,34 @@
+<ion-view view-title="Profile">
+    <ion-content>
+        <!-- <div style=" background-color: #ef473a;  text-align: center; margin-top:1px;margin-bottom:1em"> -->
+        <div style="  text-align: center; margin-top:1px;margin-bottom:1em">
+            <img src="img/driver3.png" style="padding-top:2em" /> </div>
+        <ion-list>
+            <div class="list" style=" font-weight: bolder;">
+                <label class="item item-input">
+                        <span class="input-label">Name</span>
+                        <input type="text" ng-model="ctrl.name" disabled style="text-align:center">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Employee Id.</span>
+                    <input type="text" ng-model="ctrl.id" disabled style="text-align:center">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">User Name</span>
+                    <input type="email" ng-model="ctrl.email" disabled style="text-align:center">
+                </label>
+
+                <label class="item item-input">
+                        <span class="input-label">Phone No.</span>
+                        <input type="tel" ng-model="ctrl.phone" disabled style="text-align:center">
+                </label>
+
+            </div>
+            <div align="center">
+                <button class="button button-outline button-assertive" ng-click="ctrl.signOut()"> 
+                Sign Out
+                </button>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>

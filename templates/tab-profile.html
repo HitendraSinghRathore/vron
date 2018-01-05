@@ -1,0 +1,35 @@
+<ion-view view-title="Profile" class="has-header">
+    <ion-content>
+        <!-- <div style="background-color: #387ef5;  text-align: center; margin-top:1px;margin-bottom:1em"> -->
+        <div style=" text-align: center; margin-top:1px;margin-bottom:1em">
+            <img src="img/user.png" style="padding-top:2em;" /> </div>
+        <ion-list>
+            <div class="list " style=" font-weight: bolder;padding-top:2em;  margin: 1em 1em 1em 1em;">
+                <label class="item item-input ">
+                        <span class="input-label ">Name</span>
+                        <input type="text" ng-model="ctrl.name" disabled style="text-align:center">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">College Id.</span>
+                    <input type="text" ng-model="ctrl.id" disabled style="text-align:center">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">User Name</span>
+                    <input type="email" ng-model="ctrl.email" disabled style="text-align:center">
+                </label>
+
+                <label class="item item-input">
+                        <span class="input-label">Year</span>
+                        <input type="text" ng-model="ctrl.year" disabled style="text-align:center">
+                </label>
+
+            </div>
+            <div align="center" style="padding-top:10%">
+                <button class="button button-outline button-assertive" ng-click="ctrl.signOut()"> 
+                        Sign Out
+                        </button>
+            </div>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

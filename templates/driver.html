@@ -1,0 +1,52 @@
+<ion-view view-title="DRIVER">
+    <ion-content>
+
+        <!-- <div style=" background-color: #387ef5;  text-align: center; margin-top:1px"> -->
+        <div style="   text-align: center; margin-top:1px">
+            <img src="img/driver2.png" style="padding-top:2em;" /> </div>
+
+        <div>
+            <div class="list" style="padding-top:2em; font-family: monospace; margin: 1em 1em 1em 1em;">
+                <div class="item item-divider">
+                    Details
+                </div>
+
+                <div class="item item-icon-left" href="">
+                    <i class="icon ion-person"></i> {{ctrl.driver.name}}
+                </div>
+
+                <div class="item item-icon-left" href="">
+                    <i class="icon ion-email"></i> {{ctrl.driver.email}}
+                </div>
+
+                <a class="item item-icon-left item-icon-right" ng-href="tel: {{ctrl.driver.phone}}">
+                    <i class="icon ion-android-call"></i> {{ctrl.driver.phone}}
+                    <span class="badge badge-positive">
+                        Call
+                      </span>
+
+                </a>
+
+
+
+                <div class="item item-icon-left" href="">
+                    <i class="icon ion-android-bus"></i> {{ctrl.driver.busno.busNo}}
+                </div>
+
+
+
+
+                <div class="list">
+
+                    <div class="item item-divider">
+                        Route
+                    </div>
+
+                    <div class="item">
+                        {{ctrl.driver.busno.route}}
+                    </div>
+                </div>
+            </div>
+    </ion-content>
+
+</ion-view>

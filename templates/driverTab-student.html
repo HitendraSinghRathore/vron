@@ -1,0 +1,16 @@
+<ion-view view-title="Students">
+    <ion-content class="padding">
+        <div style="text-align:center" ng-if="ctrl.students.length==0">
+            <ion-spinner icon="lines"></ion-spinner>
+        </div>
+        <div class="list">
+
+            <a class="item item-avatar" ng-repeat=" student in ctrl.students">
+                <img src="img/user1.png">
+                <h2><strong>{{student.name}}</strong></h2>
+                <p>Year: {{student.year}}</p>
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>
